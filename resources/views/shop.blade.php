@@ -4,15 +4,14 @@
 @endsection
 @section('head')
 
-@foreach($products as $product) 
+@foreach($allProducts as $product)
 
-@if($product=='samsong' || $product=='sony')
-<p class="text-center">{{ $product }}-SUPER SNIZENJE</p>
-
-@else
-<p class="text-center">{{ $product }}</p>
-@endif
-
+<div class="container">
+    <h4>{{$product['name']}}</h1>
+    <img src="{{$product['img']}}" alt="" width="250px" height="250px">
+    <p>{{$product['description']}}</p>
+    <p>{{$product['price']}}</p>
+    <hr>
+</div>
 @endforeach
-
 @endsection

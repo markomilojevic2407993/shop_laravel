@@ -16,16 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome'); });
+// HomeController
 Route::get('/home', [HomeController::class, 'index']);
-Route::get('/contact', [contactController::class, 'index']);
-Route::get('/about', function () {
-    return view('about');
-});
+
+Route::get('/about', function () { return view('about'); });
+// ShopController
 Route::get('/shop', [ShopController::class, 'index']);
 
-Route::get('/layout', function () {
-    return view('layout');
-});
+Route::get('/layout', function () {return view('layout'); }); // umesto function, unosi se controller
+
+// contactController
+Route::get('/contact', [contactController::class, 'index']);
+Route::get('/admin/all-contacts', [contactController::class, 'getAllContacts']);

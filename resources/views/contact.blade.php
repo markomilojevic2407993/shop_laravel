@@ -15,7 +15,7 @@
 </div>
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea name="sms" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
 <button class="btn btn-lg btn-success" type="submit">SEND</button>
 </div><hr>
