@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\contactController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,15 +19,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/home', [HomeController::class, 'index']);
+Route::get('/contact', [contactController::class, 'index']);
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/shop', function () {
-    return view('shop');
-});
+Route::get('/shop', [ShopController::class, 'index']);
+
 Route::get('/layout', function () {
     return view('layout');
 });
