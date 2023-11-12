@@ -29,3 +29,4 @@ Route::get('/layout', function () {return view('layout'); }); // umesto function
 // contactController
 Route::get('/contact', [contactController::class, 'index']);
 Route::get('/admin/all-contacts', [contactController::class, 'getAllContacts']);
+Route::post('/send-contact', [contactController::class, 'sendContact']);

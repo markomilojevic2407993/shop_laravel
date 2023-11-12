@@ -19,4 +19,18 @@
 @endforeach
 
 
+<form class="container" action="/send-contact" method="post">
+    <!--@csrf  token kao zastitia forme obavezna je za psot metode-->
+@csrf 
+<!--trazenje errors u laravelu-->
+@if($errors->any())
+<p>{{$errors->first()}}</p>
+@endif
+    <input type="text" name="email" placeholder="email"><br>
+    <input type="text" name="title" placeholder="title"><br>
+    <textarea name="message" id="" cols="30" rows="10" placeholder="message"></textarea><br>
+    <button class="btn btn-danger" type="submit">Send</button>
+</form>
+
+
 @endsection

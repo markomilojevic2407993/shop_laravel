@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $products = HomeModel::all();
+        $products = HomeModel::orderByDesc('id')->take(1)->get();
         $time = date('H');
 
         return view('home', compact('time', 'products'));
